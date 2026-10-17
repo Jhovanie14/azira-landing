@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T00:00:00Z",
+  "title": "Design System: Azira Aesthetics concern pages",
+  "extensions": {
+    "colorMeta": {
+      "surface": { "role": "neutral", "displayName": "Gallery White", "canonical": "#ffffff", "cssVar": "--background", "brandKey": "colours.surface", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(100% 0 0)"] },
+      "ink": { "role": "primary", "displayName": "Gallery Black", "canonical": "#050505", "cssVar": "--foreground", "brandKey": "colours.ink", "tonalRamp": ["oklch(13% 0 0)", "oklch(25% 0 0)", "oklch(37% 0 0)", "oklch(49% 0 0)", "oklch(61% 0 0)", "oklch(73% 0 0)", "oklch(85% 0 0)", "oklch(95% 0 0)"] },
+      "text": { "role": "primary", "displayName": "Charcoal Wall Text", "canonical": "#444444", "cssVar": "--copy", "brandKey": "colours.text", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(95% 0 0)"] },
+      "panel": { "role": "neutral", "displayName": "Warm Stone Panel", "canonical": "#f4f4f3", "cssVar": "--muted", "brandKey": "colours.panel", "tonalRamp": ["oklch(15% 0.002 106)", "oklch(27% 0.002 106)", "oklch(39% 0.002 106)", "oklch(51% 0.002 106)", "oklch(63% 0.002 106)", "oklch(75% 0.002 106)", "oklch(87% 0.002 106)", "oklch(96.5% 0.002 106)"] },
+      "hairline": { "role": "neutral", "displayName": "Soft Hairline", "canonical": "#c1c1c1", "cssVar": "--hairline", "brandKey": "colours.hairline", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(81% 0 0)", "oklch(95% 0 0)"] },
+      "line": { "role": "neutral", "displayName": "Input Line", "canonical": "#444444", "cssVar": "--input", "brandKey": "colours.line", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(95% 0 0)"] },
+      "room": { "role": "neutral", "displayName": "Dark Room", "canonical": "#141414", "cssVar": "--room", "brandKey": "colours.room", "tonalRamp": ["oklch(19% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(95% 0 0)"] },
+      "room-ink": { "role": "neutral", "displayName": "Room Headline White", "canonical": "#ffffff", "cssVar": "--room-foreground", "brandKey": "colours.roomInk", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(100% 0 0)"] },
+      "room-text": { "role": "neutral", "displayName": "Room Wall Text", "canonical": "#c1c1c1", "cssVar": "--room-muted", "brandKey": "colours.roomText", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(81% 0 0)", "oklch(95% 0 0)"] },
+      "accent": { "role": "secondary", "displayName": "Champagne Gold", "canonical": "#af8f43", "cssVar": "--mark", "brandKey": "colours.accent", "tonalRamp": ["oklch(22% 0.04 85)", "oklch(32% 0.06 85)", "oklch(42% 0.08 85)", "oklch(52% 0.09 85)", "oklch(64% 0.1 85)", "oklch(75% 0.08 85)", "oklch(86% 0.05 85)", "oklch(95% 0.02 85)"] },
+      "accent-ink": { "role": "secondary", "displayName": "Deep Champagne", "canonical": "#7a6330", "cssVar": "--mark-ink", "brandKey": "colours.accentInk", "tonalRamp": ["oklch(22% 0.04 85)", "oklch(32% 0.06 85)", "oklch(42% 0.08 85)", "oklch(50% 0.08 85)", "oklch(64% 0.1 85)", "oklch(75% 0.08 85)", "oklch(86% 0.05 85)", "oklch(95% 0.02 85)"] },
+      "destructive": { "role": "error", "displayName": "Clinical Red", "canonical": "#b3261e", "cssVar": "--destructive", "brandKey": "colours.destructive", "tonalRamp": ["oklch(22% 0.08 28)", "oklch(32% 0.12 28)", "oklch(42% 0.15 28)", "oklch(51% 0.17 28)", "oklch(63% 0.15 28)", "oklch(75% 0.1 28)", "oklch(86% 0.05 28)", "oklch(95% 0.02 28)"] }
+    },
+    "derivedColors": [
+      { "name": "plate", "value": "color-mix(in oklab, var(--brand-room), white 6%)", "purpose": "Dark placeholder ground for treatment stills and results." },
+      { "name": "plate-light", "value": "color-mix(in oklab, var(--brand-panel), var(--brand-text) 6%)", "purpose": "Light placeholder ground for portraits." },
+      { "name": "plate-ink", "value": "var(--brand-room-text)", "purpose": "Placeholder text and outline on dark plates." }
+    ],
+    "brandContract": {
+      "source": "content/schema.ts brandSchema",
+      "inputs": ["colours (12 six-digit hex roles)", "radius (CSS length; drives the radius scale)", "button.textTransform (uppercase | none)", "button.letterSpacing", "fonts recorded in brand.ts, loaded in content/<clinic>/fonts.ts"],
+      "contrastPairs": [
+        { "foreground": "text", "background": "surface", "min": 4.5, "use": "body text" },
+        { "foreground": "ink", "background": "surface", "min": 4.5, "use": "headings" },
+        { "foreground": "text", "background": "panel", "min": 4.5, "use": "text on panels" },
+        { "foreground": "surface", "background": "ink", "min": 4.5, "use": "primary button label" },
+        { "foreground": "accentInk", "background": "surface", "min": 4.5, "use": "accent text on the page" },
+        { "foreground": "roomText", "background": "room", "min": 4.5, "use": "text on dark bands" },
+        { "foreground": "roomInk", "background": "room", "min": 4.5, "use": "headings on dark bands" },
+        { "foreground": "accent", "background": "room", "min": 4.5, "use": "accent text on dark bands" },
+        { "foreground": "destructive", "background": "surface", "min": 4.5, "use": "error text" },
+        { "foreground": "line", "background": "surface", "min": 3, "use": "input borders" }
+      ]
+    },
+    "radiusScale": [
+      { "name": "sm", "value": "calc(var(--radius) * 0.6)" },
+      { "name": "md", "value": "calc(var(--radius) * 0.8)" },
+      { "name": "lg", "value": "var(--radius)" },
+      { "name": "xl", "value": "calc(var(--radius) * 1.4)" },
+      { "name": "2xl", "value": "calc(var(--radius) * 1.8)" },
+      { "name": "3xl", "value": "calc(var(--radius) * 2.2)" },
+      { "name": "4xl", "value": "calc(var(--radius) * 2.6)" }
+    ],
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only: 2.25rem / 3rem / 3.75rem / 4.25rem at xl, max 16ch. The closing ask runs one step larger (2.5rem / 3.75rem / 4.5rem)." },
+      "headline": { "displayName": "Headline", "purpose": "Section h2: 2rem / 2.5rem / 3rem." },
+      "title": { "displayName": "Title", "purpose": "Cause titles, treatment names, panel and form titles: 1.75rem to 2rem." },
+      "body-lead": { "displayName": "Body lead", "purpose": "Section intros, 44 to 48ch; hero intro 1.25rem at lg." },
+      "body": { "displayName": "Body", "purpose": "Running copy in charcoal, 32 to 48ch in blocks, 65ch in FAQ answers." },
+      "label": { "displayName": "Wall label", "purpose": "Tracked uppercase caption under plates, on credentials, spec terms, price prefixes and axis labels. Never a kicker." },
+      "button": { "displayName": "Button label", "purpose": "CTA labels; case and tracking come from the brand via brand-label." }
+    },
+    "shadows": [
+      { "name": "focus-stroke", "value": "inset 0 0 0 1px var(--foreground)", "purpose": "Doubles a 1px border on focused inputs and selects, and on checked choice cards." },
+      { "name": "arrival-ring", "value": "inset 0 0 0 2px var(--foreground)", "purpose": "Ring on the enquiry card when a Book button arrives, fading to transparent over 1.2s after a 0.5s delay." },
+      { "name": "floating-list", "value": "0 12px 32px -12px color-mix(in oklab, var(--foreground) 25%, transparent)", "purpose": "Select popover; the only lift in the system." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The one easing for every moment." },
+      { "name": "fade-up", "value": "opacity 0 to 1, translateY 12px to 0, 400ms, once at 15% in view", "purpose": "Section entrance below the hero. Never on the hero headline, image or form." },
+      { "name": "bar-slide", "value": "translateY 100% to 0, 300ms", "purpose": "Mobile Call/Book bar entering once the hero buttons scroll away, and leaving while the form is on screen." },
+      { "name": "success-swap", "value": "form exit opacity 0 and -8px in 200ms; thank-you enter from 8px in 400ms", "purpose": "Replaces the enquiry form in place on success." },
+      { "name": "state-transition", "value": "200ms", "purpose": "Button and input colour and border changes." },
+      { "name": "reduced-motion", "value": "MotionConfig reducedMotion=\"user\"; smooth scroll only with no-preference", "purpose": "Movement drops to opacity only when the user asks for reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "shell-max", "value": "1440px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single solid action on a light ground; Book scrolls to the form, submit sends it.",
+      "html": "<button class=\"ds-btn-primary\">Request consultation</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 56px; padding: 0 24px; background: var(--primary, #050505); color: var(--primary-foreground, #ffffff); border: 1px solid transparent; border-radius: var(--radius, 0); font-family: var(--font-body-face, Jost, sans-serif); font-size: 0.8125rem; font-weight: 500; text-transform: var(--brand-button-case, uppercase); letter-spacing: var(--brand-button-tracking, 0.16em); cursor: pointer; transition: background-color 200ms, translate 200ms; } .ds-btn-primary:hover { background: var(--copy, #444444); } .ds-btn-primary:focus-visible { outline: 2px solid var(--ring, #050505); outline-offset: 3px; } .ds-btn-primary:active { translate: 0 1px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action on light grounds, set beside the primary.",
+      "html": "<button class=\"ds-btn-outline\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384\"/></svg>Call 01633 258 080</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 56px; padding: 0 24px; background: var(--background, #ffffff); color: var(--foreground, #050505); border: 1px solid var(--copy, #444444); border-radius: var(--radius, 0); font-family: var(--font-body-face, Jost, sans-serif); font-size: 0.8125rem; font-weight: 500; text-transform: var(--brand-button-case, uppercase); letter-spacing: var(--brand-button-tracking, 0.16em); cursor: pointer; transition: background-color 200ms; } .ds-btn-outline:hover { background: var(--muted, #f4f4f3); } .ds-btn-outline:focus-visible { outline: 2px solid var(--ring, #050505); outline-offset: 3px; }"
+    },
+    {
+      "name": "Room Action Pair",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "Inverse white Book and outlined Call on a dark room band (hero, treatments, closing ask).",
+      "html": "<div class=\"ds-room\"><button class=\"ds-btn-inverse\">Book consultation</button><button class=\"ds-btn-outline-inverse\">Call 01633 258 080</button></div>",
+      "css": ".ds-room { display: flex; flex-wrap: wrap; gap: 10px; padding: 32px; background: var(--room, #141414); } .ds-btn-inverse, .ds-btn-outline-inverse { display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 24px; border-radius: var(--radius, 0); font-family: var(--font-body-face, Jost, sans-serif); font-size: 0.8125rem; font-weight: 500; text-transform: var(--brand-button-case, uppercase); letter-spacing: var(--brand-button-tracking, 0.16em); cursor: pointer; transition: background-color 200ms, border-color 200ms; } .ds-btn-inverse { background: var(--room-foreground, #ffffff); color: var(--foreground, #050505); border: 1px solid transparent; } .ds-btn-inverse:hover { background: var(--muted, #f4f4f3); } .ds-btn-outline-inverse { background: transparent; color: var(--room-foreground, #ffffff); border: 1px solid rgb(255 255 255 / 0.7); } .ds-btn-outline-inverse:hover { border-color: var(--room-foreground, #ffffff); background: rgb(255 255 255 / 0.1); } .ds-btn-inverse:focus-visible, .ds-btn-outline-inverse:focus-visible { outline: 2px solid var(--room-foreground, #ffffff); outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "48px field with a 1px line border; focus doubles the stroke in ink.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Mobile</span><input class=\"ds-input\" type=\"tel\" /></label>",
+      "css": ".ds-field { display: grid; gap: 8px; font-family: var(--font-body-face, Jost, sans-serif); } .ds-field-label { font-size: 0.875rem; font-weight: 500; color: var(--foreground, #050505); } .ds-input { height: 48px; padding: 0 14px; font: inherit; font-size: 1rem; color: var(--foreground, #050505); background: var(--background, #ffffff); border: 1px solid var(--input, #444444); border-radius: 0; outline: none; transition: border-color 200ms, box-shadow 200ms; } .ds-input:hover { border-color: var(--foreground, #050505); } .ds-input:focus-visible { border-color: var(--foreground, #050505); box-shadow: inset 0 0 0 1px var(--foreground, #050505); }"
+    },
+    {
+      "name": "Choice Card",
+      "kind": "chip",
+      "refersTo": "choice-card",
+      "description": "Qualifying-question radio row; checked doubles the ink stroke.",
+      "html": "<div class=\"ds-choices\"><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-start\" checked /> Right away</label><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-start\" /> Within 3 months</label><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-start\" /> Just looking</label></div>",
+      "css": ".ds-choices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; } .ds-choice { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 12px; background: var(--background, #ffffff); color: var(--foreground, #050505); border: 1px solid rgb(68 68 68 / 0.5); border-radius: var(--radius, 0); font-family: var(--font-body-face, Jost, sans-serif); font-size: 0.9375rem; cursor: pointer; transition: border-color 200ms; } .ds-choice:hover { border-color: var(--foreground, #050505); } .ds-choice:has(input:checked) { border-color: var(--foreground, #050505); box-shadow: inset 0 0 0 1px var(--foreground, #050505); } .ds-choice input { accent-color: var(--foreground, #050505); margin: 0; } .ds-choice:has(input:focus-visible) { outline: 2px solid var(--ring, #050505); outline-offset: 3px; }"
+    },
+    {
+      "name": "Plate with Wall Label",
+      "kind": "card",
+      "refersTo": "plate",
+      "description": "Signature: a cropped photograph on a dark plate ground with a tracked caption bound 8px beneath.",
+      "html": "<figure class=\"ds-plate-fig\"><div class=\"ds-plate\"></div><figcaption class=\"ds-caption\">Morpheus8 handpiece · Treatment room</figcaption></figure>",
+      "css": ".ds-plate-fig { margin: 0; padding: 24px; background: var(--room, #141414); } .ds-plate { aspect-ratio: 4 / 3; background: color-mix(in oklab, var(--room, #141414), white 6%); outline: 1px solid rgb(193 193 193 / 0.25); outline-offset: -8px; } .ds-caption { margin-top: 8px; font-family: var(--font-body-face, Jost, sans-serif); font-size: 0.75rem; line-height: 1.5; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--room-muted, #c1c1c1); }"
+    },
+    {
+      "name": "Ruled Ledger",
+      "kind": "custom",
+      "refersTo": "ledger",
+      "description": "Lists, specs and credentials: a charcoal top rule, hairline rows, caption terms.",
+      "html": "<dl class=\"ds-ledger\"><div><dt>Sessions</dt><dd>Usually 3, about 4 to 6 weeks apart</dd></div><div><dt>Downtime</dt><dd>Redness and swelling for 2 to 3 days</dd></div><div><dt>Best for</dt><dd>Mild to moderate laxity along the jaw</dd></div></dl>",
+      "css": ".ds-ledger { margin: 0; border-top: 1px solid var(--copy, #444444); font-family: var(--font-body-face, Jost, sans-serif); } .ds-ledger > div { display: grid; grid-template-columns: 8.5rem 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--hairline, #c1c1c1); } .ds-ledger dt { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copy, #444444); padding-top: 2px; } .ds-ledger dd { margin: 0; color: var(--foreground, #050505); line-height: 1.375; }"
+    },
+    {
+      "name": "Slim Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Logo and phone only, no menu, closed by a charcoal rule.",
+      "html": "<header class=\"ds-header\"><span class=\"ds-logo\">Azira Aesthetics</span><a class=\"ds-phone\" href=\"#\"><span class=\"ds-phone-cap\">Call the clinic</span><span class=\"ds-phone-num\">01633 258 080</span></a></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 40px; background: var(--background, #ffffff); border-bottom: 1px solid var(--copy, #444444); } .ds-logo { font-family: var(--font-heading-face, Quicksand, sans-serif); font-size: 1.125rem; color: var(--foreground, #050505); } .ds-phone { display: flex; align-items: center; gap: 10px; min-height: 44px; color: var(--foreground, #050505); text-decoration: none; font-family: var(--font-body-face, Jost, sans-serif); } .ds-phone-cap { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copy, #444444); } .ds-phone-num { font-size: 0.9375rem; letter-spacing: 0.06em; font-variant-numeric: tabular-nums lining-nums; text-underline-offset: 0.2em; } .ds-phone:hover .ds-phone-num { text-decoration: underline; } .ds-phone:focus-visible { outline: 2px solid var(--ring, #050505); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Gallery Wall",
+    "overview": "The page is a white gallery wall. The clinic's own photographs (gloved hands, instruments, the treatment room) hang on it as plates. Each plate carries a tracked uppercase wall label, and the copy sits beside the pictures like wall text. A dark photo-backed band opens the page, deep \"dark room\" bands recur where the framework calls for them, and warm grey panels hold the quiet material: the form, the clinician, the steps. The tone is precise and clinical: hairline rules, square corners, one solid action per band, and a light-weight rounded display face so the precision never turns severe.\n\nThis is a multi-clinic template. Each clinic's `content/<clinic>/brand.ts` supplies every value: colours, radius, button label case and tracking, and (through `content/<clinic>/fonts.ts`) the two faces. `lib/brand-style.ts` injects these as `--brand-*` variables on `<html>`, and `app/globals.css` maps them onto semantic tokens. Components use only the semantic tokens, so a new clinic is re-branded without touching a component. The values in the frontmatter are Azira Aesthetics', the current instance. Pages are light only (`color-scheme: light`).\n\nThe world was built to avoid the beauty-clinic default of a blush split hero with a smiling model and a row of icon cards. Imagery is never stock (a hard rule in CLAUDE.md). Until the clinic supplies photos, every plate renders a marked placeholder naming the file it needs.",
+    "keyCharacteristics": [
+      "White ground, near-black display type, charcoal body text, 1px rules.",
+      "Three tonal grounds carry all the depth: white surface, warm grey panel, dark room.",
+      "Square corners (Azira's radius is 0) on buttons, inputs, plates and panels.",
+      "Every photograph is a plate with a wall label bound tight beneath it.",
+      "Champagne gold appears only as hairlines, the award mark and gold text.",
+      "Motion is quiet: section fade-ups once, a sliding phone action bar, and two form moments."
+    ],
+    "rules": [
+      { "name": "The Gold-as-Hairline Rule", "body": "The accent is a 1px rule, an award mark or gold text, never a fill, a button or a background. On light grounds, gold text always uses `accent-ink`.", "section": "colors" },
+      { "name": "The Three Grounds Rule", "body": "Every band is one of three grounds: surface, panel or room. A new section picks one of these and never introduces a fourth tint.", "section": "colors" },
+      { "name": "The Light Hand Rule", "body": "Display and headline type stays at the heading face's regular weight (400) at every size. Hierarchy comes from size and space, never from bold.", "section": "typography" },
+      { "name": "The Wall Label Rule", "body": "The tracked caption labels something that is present: a plate, a data term, a price, an axis. It is never a free-floating kicker above a heading.", "section": "typography" },
+      { "name": "The Flat Wall Rule", "body": "Bands, cards, plates and panels never cast shadows. Only something that floats above the page (a select list, a dialog) may lift.", "section": "elevation" },
+      { "name": "The Ruled Ledger Rule", "body": "Lists, specs, credentials, steps and FAQs are ledgers: a 1px rule in `text` across the top, then `hairline` row dividers. Cards with borders on all four sides are not used for lists.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do route every colour, radius and button label style through the semantic tokens, so a clinic's `brand.ts` can restyle the page without a component change.",
+      "Do keep each band to one solid action: `ink` primary on light grounds, inverse white on room bands, with an outlined Call beside it.",
+      "Do bind a 0.75rem tracked uppercase wall label (0.2em) directly under every plate, 8px below it.",
+      "Do build lists as ruled ledgers: a 1px `text` top rule, then `hairline` rows (`room-ink` at 15–40% on room bands).",
+      "Do set headlines in the heading face at 400 weight with tight leading (1.05–1.12) and balanced wrapping.",
+      "Do use `accent-ink` for any gold text or icon on a light ground; `accent` itself is for rules and room-band text only.",
+      "Do keep the hero, its photo and the form still on load. Animate only sections below the fold, once."
+    ],
+    "donts": [
+      "Don't use stock photography or a smiling-model split hero. Plates show the clinic's own hands, instruments and rooms.",
+      "Don't use gold as a fill, a button colour or a background.",
+      "Don't add shadows to bands, plates, cards or buttons. Depth comes from the surface, panel and room grounds.",
+      "Don't add a site menu, or a button that leaves the page.",
+      "Don't put a tracked caption above a heading as a kicker or eyebrow.",
+      "Don't introduce a second easing curve or animate on load above the fold."
+    ]
+  }
+}

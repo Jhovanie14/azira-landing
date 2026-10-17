@@ -1,15 +1,24 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import type { Metadata, Viewport } from "next"
 
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { site } from "@/content"
+import { activeFonts } from "@/content/fonts"
+import { brandStyle } from "@/lib/brand-style"
+import { cn } from "@/lib/utils"
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+// Meta Business Manager domain verification, from an env var per deployment
+const metaDomainVerification = process.env.META_DOMAIN_VERIFICATION?.trim()
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+export const metadata: Metadata = {
+  other: metaDomainVerification
+    ? { "facebook-domain-verification": metaDomainVerification }
+    : undefined,
+}
+
+export const viewport: Viewport = {
+  themeColor: site.brand.colours.surface,
+  viewportFit: "cover",
+}
 
 export default function RootLayout({
   children,
@@ -18,12 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      lang="en-GB"
+      className={cn(activeFonts.heading.variable, activeFonts.body.variable)}
+      style={brandStyle(site.brand)}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        {children}
+        {/* Without JavaScript, fade-up sections must still be visible */}
+        <noscript>
+          <style>{`[data-fade]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
       </body>
     </html>
   )

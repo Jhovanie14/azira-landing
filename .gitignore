@@ -30,6 +30,7 @@ pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -37,3 +38,17 @@ pnpm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI tooling: installed skills are restored from skills-lock.json
+/.agents/
+/.aider-desk/
+/.claude/skills/
+/.claude/settings.local.json
+
+# Impeccable: local config, caches, captures and spent direction sketches
+/.impeccable/config.local.json
+/.impeccable/hook.cache.json
+/.impeccable/live/
+/.impeccable/questions/
+/.impeccable/review/
+/.impeccable/decision/

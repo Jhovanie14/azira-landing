@@ -1,0 +1,278 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-17T15:55:20.038Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-17T15:55:20.157Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-17T15:55:20.280Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-17T15:55:20.405Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-17T15:55:20.537Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-17T15:55:20.668Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-17T15:55:20.798Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-17T15:55:20.919Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon.html"
+        ],
+        "createdAt": "2026-10-17T15:55:21.041Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon.html"
+        ],
+        "createdAt": "2026-10-17T15:55:21.159Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon.html"
+        ],
+        "createdAt": "2026-10-17T15:55:21.278Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon.html"
+        ],
+        "createdAt": "2026-10-17T15:55:21.396Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:21.516Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:21.637Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:21.753Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:21.888Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/model-pick-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:22.007Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/model-pick-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:22.131Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/model-pick-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:22.251Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/model-pick-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:22.372Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:22.495Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:22.617Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:22.738Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon-r1.html"
+        ],
+        "createdAt": "2026-10-17T15:55:22.868Z",
+        "reason": "Claude: throwaway direction-round sketch rendered as a skeleton thumbnail on the decision page; not shipping UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-17T16:32:44.090Z",
+        "reason": "Claude: throwaway direction-round sketch, not shipping UI; fonts predate DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-17T16:32:44.213Z",
+        "reason": "Claude: throwaway direction-round sketch, not shipping UI; fonts predate DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon.html"
+        ],
+        "createdAt": "2026-10-17T16:32:44.343Z",
+        "reason": "Claude: throwaway direction-round sketch, not shipping UI; fonts predate DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned-r1.html"
+        ],
+        "createdAt": "2026-10-17T16:32:44.463Z",
+        "reason": "Claude: throwaway direction-round sketch, not shipping UI; fonts predate DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/model-pick-r1.html"
+        ],
+        "createdAt": "2026-10-17T16:32:44.582Z",
+        "reason": "Claude: throwaway direction-round sketch, not shipping UI; fonts predate DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon-r1.html"
+        ],
+        "createdAt": "2026-10-17T16:32:44.700Z",
+        "reason": "Claude: throwaway direction-round sketch, not shipping UI; fonts predate DESIGN.md"
+      }
+    ]
+  }
+}

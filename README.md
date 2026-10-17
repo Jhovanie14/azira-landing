@@ -1,21 +1,23 @@
-# Next.js template
+# azira-landing
 
-This is a Next.js template with shadcn/ui.
+Paid-ads landing pages for clinics, one statically generated page per concern, built to turn a click into a qualified enquiry. The first clinic is Azira Aesthetics.
 
-## Adding components
-
-To add components to your app, run the following command:
+## Run it
 
 ```bash
-npx shadcn@latest add button
+npm install
+cp .env.example .env.local   # then fill in the values you have
+npm run dev                  # http://localhost:3000/skin-laxity
 ```
 
-This will place the ui components in the `components` directory.
+`npm run build`, `npm run lint` and `npm run typecheck` verify a change. There's no test suite.
 
-## Using components
+## Where things are
 
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button";
-```
+- `docs/FRAMEWORK.md`: the 14-block landing page framework every page follows
+- `docs/CONTENT-MODEL.md`: the content each concern page needs
+- `docs/TRACKING.md`: where leads go, the tracking they carry, consent and the Meta Pixel, and how to test them
+- `docs/WORKFLOW.md`: the step-by-step process for each clinic
+- `docs/azira-answers.md`: the questions for Azira, pre-filled where known
+- `content/<clinic>/`: each clinic's brand, clinic details and concern pages
+- `CLAUDE.md`: architecture notes and the hard landing-page rules
