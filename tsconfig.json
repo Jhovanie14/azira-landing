@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@palette/panel": ["./components/palette/no-panel.tsx"]
     }
   },
   "include": [

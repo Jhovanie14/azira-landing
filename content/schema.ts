@@ -38,7 +38,7 @@ export function contrast(a: string, b: string) {
   return (hi + 0.05) / (lo + 0.05)
 }
 
-const brandColoursSchema = z.object({
+const colourRoles = z.object({
   /** Page ground */
   surface: hex,
   /** Headings and the solid primary button */
@@ -62,18 +62,16 @@ const brandColoursSchema = z.object({
   destructive: hex,
 })
 
+type ColourRole = keyof z.infer<typeof colourRoles>
+
 /** Pairs that must meet WCAG AA, as [foreground, background, minimum, use] */
-const CONTRAST_PAIRS: [
-  keyof z.infer<typeof brandColoursSchema>,
-  keyof z.infer<typeof brandColoursSchema>,
-  number,
-  string,
-][] = [
+const CONTRAST_PAIRS: [ColourRole, ColourRole, number, string][] = [
   ["text", "surface", 4.5, "body text"],
   ["ink", "surface", 4.5, "headings"],
   ["text", "panel", 4.5, "text on panels"],
   ["surface", "ink", 4.5, "primary button label"],
   ["accentInk", "surface", 4.5, "accent text on the page"],
+  ["accentInk", "panel", 4.5, "accent text on panels"],
   ["roomText", "room", 4.5, "text on dark bands"],
   ["roomInk", "room", 4.5, "headings on dark bands"],
   ["accent", "room", 4.5, "accent text on dark bands"],
@@ -81,36 +79,49 @@ const CONTRAST_PAIRS: [
   ["line", "surface", 3, "input borders"],
 ]
 
-export const brandSchema = z
-  .object({
-    /** Where the brand was taken from */
-    source: z.url(),
-    logo: imageAssetSchema,
-    colours: brandColoursSchema,
-    /** Corner radius for every component, e.g. "0rem" for square */
-    radius: text,
-    button: z.object({
-      /** Label case for buttons */
-      textTransform: z.enum(["uppercase", "none"]),
-      letterSpacing: text,
-    }),
-    /** Fonts are loaded in content/<clinic>/fonts.ts; recorded here for reference */
-    fonts: z.object({ heading: text, body: text }),
-    photoStyle: text,
-    voice: z.array(text).min(1),
-  })
-  .superRefine((brand, ctx) => {
-    for (const [fg, bg, min, use] of CONTRAST_PAIRS) {
-      const ratio = contrast(brand.colours[fg], brand.colours[bg])
-      if (ratio < min) {
-        ctx.addIssue({
-          code: "custom",
-          path: ["colours", fg],
-          message: `${fg} on ${bg} (${use}) is ${ratio.toFixed(2)}:1; WCAG AA needs ${min}:1`,
-        })
-      }
+/** The twelve colour roles every brand and palette sets, checked against WCAG AA */
+export const brandColoursSchema = colourRoles.superRefine((colours, ctx) => {
+  for (const [fg, bg, min, use] of CONTRAST_PAIRS) {
+    const ratio = contrast(colours[fg], colours[bg])
+    if (ratio < min) {
+      ctx.addIssue({
+        code: "custom",
+        path: [fg],
+        message: `${fg} on ${bg} (${use}) is ${ratio.toFixed(2)}:1; WCAG AA needs ${min}:1`,
+      })
     }
-  })
+  }
+})
+
+/**
+ * An alternative colour scheme the client can preview (review builds only).
+ * Same roles and contrast rules as the brand.
+ */
+export const paletteSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  label: text,
+  /** One line on the character of the palette */
+  blurb: text,
+  colours: brandColoursSchema,
+})
+
+export const brandSchema = z.object({
+  /** Where the brand was taken from */
+  source: z.url(),
+  logo: imageAssetSchema,
+  colours: brandColoursSchema,
+  /** Corner radius for every component, e.g. "0rem" for square */
+  radius: text,
+  button: z.object({
+    /** Label case for buttons */
+    textTransform: z.enum(["uppercase", "none"]),
+    letterSpacing: text,
+  }),
+  /** Fonts are loaded in content/<clinic>/fonts.ts; recorded here for reference */
+  fonts: z.object({ heading: text, body: text }),
+  photoStyle: text,
+  voice: z.array(text).min(1),
+})
 
 // --- Clinic --------------------------------------------------------------------
 
@@ -270,10 +281,14 @@ export const clinicContentSchema = z.object({
   brand: brandSchema,
   clinic: clinicSchema,
   concerns: z.array(concernPageSchema).min(1),
+  /** Colour schemes for the client to compare; the first is the brand's own */
+  palettes: z.array(paletteSchema).optional(),
 })
 
 export type ImageAsset = z.infer<typeof imageAssetSchema>
 export type Brand = z.infer<typeof brandSchema>
+export type BrandColours = z.infer<typeof brandColoursSchema>
+export type Palette = z.infer<typeof paletteSchema>
 export type Clinic = z.infer<typeof clinicSchema>
 export type Clinician = z.infer<typeof clinicianSchema>
 export type Treatment = z.infer<typeof treatmentSchema>
@@ -284,5 +299,6 @@ export type ClinicContent = z.infer<typeof clinicContentSchema>
 
 /** Input types for authoring content files (before parsing) */
 export type BrandInput = z.input<typeof brandSchema>
+export type PaletteInput = z.input<typeof paletteSchema>
 export type ClinicInput = z.input<typeof clinicSchema>
 export type ConcernPageInput = z.input<typeof concernPageSchema>

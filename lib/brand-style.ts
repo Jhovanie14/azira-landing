@@ -1,10 +1,9 @@
 import type { CSSProperties } from "react"
 
-import type { Brand } from "@/content/schema"
+import type { Brand, BrandColours } from "@/content/schema"
 
-/** The brand as --brand-* CSS variables, read by the tokens in app/globals.css */
-export function brandStyle(brand: Brand): CSSProperties {
-  const c = brand.colours
+/** The colour roles as --brand-* variables, read by the tokens in app/globals.css */
+export function colourVars(c: BrandColours): Record<string, string> {
   return {
     "--brand-surface": c.surface,
     "--brand-ink": c.ink,
@@ -18,6 +17,13 @@ export function brandStyle(brand: Brand): CSSProperties {
     "--brand-accent": c.accent,
     "--brand-accent-ink": c.accentInk,
     "--brand-destructive": c.destructive,
+  }
+}
+
+/** The whole brand as --brand-* variables for <html> */
+export function brandStyle(brand: Brand): CSSProperties {
+  return {
+    ...colourVars(brand.colours),
     "--brand-radius": brand.radius,
     "--brand-button-case": brand.button.textTransform,
     "--brand-button-tracking": brand.button.letterSpacing,

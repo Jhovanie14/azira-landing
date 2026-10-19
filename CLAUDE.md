@@ -41,7 +41,8 @@ Next.js 16.4 (App Router), React 19.3, TypeScript, Tailwind CSS v4, shadcn/ui, Z
 
   `content/index.ts` picks the active clinic from the `CLINIC` env var (default `azira`), parses it at import (bad content fails the build), and exports `site`, `getConcern`, `getVariant` and `concernSlugs`. `content/fonts.ts` is the matching registry for fonts.
 - **Theme**: `app/globals.css` maps the shadcn and landing-page tokens (`copy`, `hairline`, `room`, `mark`, `mark-ink`, `plate`) onto `--brand-*` variables. `app/layout.tsx` injects those variables on `<html>` from the active `brand.ts` (via `lib/brand-style.ts`), together with the font variables. Components use tokens only: no hex values, no fonts, no radii.
-- **Contrast is enforced**: `brandSchema` checks the key colour pairs against WCAG AA, and the build fails if a clinic's colours don't pass.
+- **Contrast is enforced**: `brandColoursSchema` checks the key colour pairs against WCAG AA for the brand and every palette, and the build fails if any don't pass.
+- **Colour review (preview builds only)**: with `NEXT_PUBLIC_PALETTE_PREVIEW=1`, a "Colours" panel lets the client switch between the palettes in `content/<clinic>/palettes.ts` and copy a `?palette=<id>` link back to us. A head script applies the choice before first paint. Without the flag, `next.config.ts` aliases `@palette/panel` to an empty stub and the layout renders no script, so production ships none of it. Once the client chooses, copy that palette's colours into `brand.colours` and delete the palettes file, `components/palette/`, `lib/palette-review.ts` and the alias.
 - **Routing**:
   - `app/[concern]/page.tsx` is the default page.
   - `app/[concern]/v/[headline]/[audience]/page.tsx` holds the prebuilt variants.
